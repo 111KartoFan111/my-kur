@@ -44,3 +44,39 @@ img{
 .swiper-slide.swiper-slide-prev{
   display: flex !important;
 }
+/* Добавьте эти стили в соответствующие CSS-файлы */
+
+/* Стили для индикатора загрузки */
+.loading-indicator {
+  text-align: center;
+  padding: 50px;
+  color: #777;
+  font-size: 18px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  margin: 30px 0;
+}
+
+/* Стили для сообщений об ошибках */
+.error-message {
+  text-align: center;
+  padding: 30px;
+  color: #e74c3c;
+  font-size: 16px;
+  background-color: #fdf3f2;
+  border: 1px solid #f5b7b1;
+  border-radius: 12px;
+  margin: 30px 0;
+}
+
+/* Стили для пустых сообщений */
+.no-cars-message,
+.no-blogs-message {
+  text-align: center;
+  padding: 40px 0;
+  color: #777;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  margin: 30px 0;
+}

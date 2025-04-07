@@ -1,0 +1,419 @@
+.profile-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 30px;
+    font-family: var(--font-dm);
+  }
+  
+  .profile-sidebar {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+  }
+  
+  .profile-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .avatar-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-header);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .user-name {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 5px;
+  }
+  
+  .admin-badge {
+    background-color: #405FF2;
+    color: white;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 10px;
+  }
+  
+  .profile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .profile-menu li {
+    padding: 12px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    transition: all 0.2s ease;
+  }
+  
+  .profile-menu li:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .profile-menu li.active {
+    background-color: #405FF2;
+    color: white;
+  }
+  
+  .profile-menu li.logout {
+    margin-top: 20px;
+    color: #ff4545;
+    font-weight: 500;
+  }
+  
+  .profile-content {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+  }
+  
+  .alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .alert.success {
+    background-color: #e6f7e6;
+    color: #2c7a2c;
+    border: 1px solid #c3e6c3;
+  }
+  
+  .alert.error {
+    background-color: #ffebeb;
+    color: #c73737;
+    border: 1px solid #f5c7c7;
+  }
+  
+  .alert button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  .profile-details h2,
+  .my-cars h2,
+  .add-car h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--color-header);
+    font-size: 24px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+  }
+  
+  .profile-info .info-row {
+    margin-bottom: 15px;
+    display: flex;
+  }
+  
+  .profile-info .label {
+    font-weight: 600;
+    width: 150px;
+  }
+  
+  .profile-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .profile-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .profile-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+  
+  .profile-form small {
+    color: #888;
+    font-size: 12px;
+  }
+  
+  .form-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    border: none;
+    transition: all 0.2s ease;
+  }
+  
+  .btn.primary {
+    background-color: #405FF2;
+    color: white;
+  }
+  
+  .btn.primary:hover {
+    background-color: #2b4fd1;
+  }
+  
+  .btn.secondary {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .btn.secondary:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .btn.danger {
+    background-color: #ff4545;
+    color: white;
+  }
+  
+  .btn.danger:hover {
+    background-color: #e13535;
+  }
+  
+  .no-cars {
+    color: #888;
+    font-size: 16px;
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .no-cars .link {
+    color: #405FF2;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .car-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .car-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .status.approved {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status.rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .car-image {
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .car-details {
+    padding: 15px;
+  }
+  
+  .car-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+  }
+  
+  .car-price {
+    font-weight: 700;
+    color: #405FF2;
+    margin: 5px 0;
+  }
+  
+  .car-description {
+    color: #666;
+    font-size: 14px;
+    margin: 10px 0;
+    line-height: 1.4;
+  }
+  
+  .car-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  
+  .car-actions {
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .car-form {
+    margin-top: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+  }
+  
+  .form-group.full-width {
+    width: 100%;
+  }
+  
+  .car-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .car-form input,
+  .car-form select,
+  .car-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+  }
+  
+  .car-form textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .car-form h3 {
+    margin: 30px 0 15px;
+    font-size: 18px;
+    color: var(--color-header);
+  }
+  
+  .image-preview,
+  .gallery-item {
+    position: relative;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .image-preview img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .gallery-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .gallery-item {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .remove-image {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(255, 69, 69, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .profile-container {
+      flex-direction: column;
+      padding: 0 15px;
+    }
+    
+    .profile-sidebar {
+      width: 100%;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .car-list {
+      grid-template-columns: 1fr;
+    }
+  }
